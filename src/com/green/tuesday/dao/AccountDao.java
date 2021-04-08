@@ -114,7 +114,7 @@ public class AccountDao {
 
 		DBConnection db = null;
 
-		int InsertResult = 0;
+		int insertResult = 0;
 
 		try {
 			db = new DBConnection();
@@ -130,7 +130,7 @@ public class AccountDao {
 			pstmt.setString(2,clientPassword);
 			pstmt.setString(3,clientEmail);
 
-			InsertResult = pstmt.executeUpdate();
+			insertResult = pstmt.executeUpdate();
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -146,7 +146,7 @@ public class AccountDao {
 			}
 		
 		}
-		return InsertResult;
+		return insertResult;
 	
 	}
 

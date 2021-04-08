@@ -21,14 +21,13 @@ public class AccountCreate implements Action {
 		String clientPassword = request.getParameter("clientPassword");
 		String clientEmail = request.getParameter("clientEmail");
 		
-		int InsertResult = accountDao.insertAccount(clientId, clientPassword, clientEmail);
+		int insertResult = accountDao.insertAccount(clientId, clientPassword, clientEmail);
 
-		System.out.println("회원가입 결과: " + InsertResult);		
+		System.out.println("회원가입 결과: " + insertResult);		
 
-		if(InsertResult==1) {
-			String path = "/board?cmd=Home";
+		String path = "/board?cmd=Home";
 			
-			request.getRequestDispatcher(path).forward(request, response);
-		}
+		request.getRequestDispatcher(path).forward(request, response);
+		
 	}
 }

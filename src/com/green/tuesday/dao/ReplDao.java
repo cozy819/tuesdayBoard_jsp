@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.green.tuesday.db.DBConnection;
-import com.green.tuesday.vo.MusicVo;
 import com.green.tuesday.vo.ReplVo;
 
 public class ReplDao {
@@ -72,7 +71,7 @@ public class ReplDao {
 		
 		DBConnection db = null;
 
-		int InsertResult = 0;
+		int insertResult = 0;
 
 		try {
 			db = new DBConnection();
@@ -89,7 +88,7 @@ public class ReplDao {
 			pstmt.setString(2, replWriter);
 			pstmt.setString(3, replContent);
 			
-			InsertResult = pstmt.executeUpdate();
+			insertResult = pstmt.executeUpdate();
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -105,7 +104,7 @@ public class ReplDao {
 			}
 		
 		}
-		return InsertResult;
+		return insertResult;
 	}
 
 	public int deleteRepl(int replNum) {
@@ -145,6 +144,84 @@ public class ReplDao {
 		return deleteResult;
 	}
 
+	public ReplVo getRepl(int reqReplNum) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		ReplVo replVo = null;
+		
+		DBConnection db = null;
+
+		try {
+			db = new DBConnection();
+			conn = db.getConnection();
+
+			String sql = "SELECT replNum, songNum, replWriter, replContent, registerDate";
+			sql += " FROM repls WHERE replNum = ?";
+
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, reqReplNum);
+			
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				int replNum = rs.getInt("replNum");
+				int songNum = rs.getInt("songNum");
+				String replWriter = rs.getString("replWriter");
+				String replContent = rs.getString("replContent");
+				String registerDate = rs.getString("registerDate");
+
+				replVo = new ReplVo(replNum, songNum, replWriter, replContent, registerDate);
+
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		
+		} finally {
+			try {
+				if(rs!=null)    rs.close();
+				if(pstmt!=null) pstmt.close();
+				if(conn!=null)  conn.close();
+		
+			} catch(Exception e) {
+				e.printStackTrace();
+			
+			}
+		}
+
+		return replVo;	
 	
+	}
+
+	public int updateRepl(int replNum, String replWriter, String replContent) {
+		int result = 0;
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		DBConnection db = null;
+
+		try {
+			db = new DBConnection();
+			conn = db.getConnection();
+
+			String sql = "update repls set replWriter = ?, replContent = ? where replNum = ?";
+
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, replWriter);
+			pstmt.setString(2, replContent);
+			pstmt.setInt(3, replNum);
+			
+			result = pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}			
+
+		return result;
+	}
 
 }

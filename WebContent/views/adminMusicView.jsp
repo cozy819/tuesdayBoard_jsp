@@ -51,7 +51,7 @@
           <div>${repl.registerDate}</div>
           <div>${repl.replContent}</div>
           <div>
-            <a href="/board?cmd=ReplEdit&replNum=${repl.replNum}&songNum=${musicVo.songNum}">수정</a>
+            <a href="/board?cmd=ReplUpdateForm&replNum=${repl.replNum}&songNum=${musicVo.songNum}">수정</a>
             <a href="/board?cmd=ReplDelete&replNum=${repl.replNum}&songNum=${musicVo.songNum}">삭제</a>
           </div>
         </div>

@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.green.tuesday.db.DBConnection;
-import com.green.tuesday.vo.ClientVo;
 import com.green.tuesday.vo.GenreVo;
 
 public class GenreDao {
@@ -155,7 +154,7 @@ public class GenreDao {
 		
 		DBConnection db = null;
 
-		int InsertResult = 0;
+		int insertResult = 0;
 
 		try {
 			db = new DBConnection();
@@ -170,7 +169,7 @@ public class GenreDao {
 
 			pstmt.setString(1,genreName);
 			
-			InsertResult = pstmt.executeUpdate();
+			insertResult = pstmt.executeUpdate();
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -186,7 +185,7 @@ public class GenreDao {
 			}
 		
 		}
-		return InsertResult;
+		return insertResult;
 	}
 
 }

@@ -25,6 +25,8 @@ import com.green.tuesday.impl.GenreUpdateForm;
 import com.green.tuesday.impl.Home;
 import com.green.tuesday.impl.ReplAdd;
 import com.green.tuesday.impl.ReplDelete;
+import com.green.tuesday.impl.ReplUpdate;
+import com.green.tuesday.impl.ReplUpdateForm;
 
 public class ActionFactory {
 	public Action getAction(String cmd) {
@@ -120,6 +122,14 @@ public class ActionFactory {
 				
 			case "ReplDelete":
 				action = new ReplDelete();
+				break;
+			
+			case "ReplUpdateForm":
+				action = new ReplUpdateForm();
+				break;
+			
+			case "ReplUpdate":
+				action = new ReplUpdate();
 				break;
 			
 			//-- AdminMusic --------------------------------------------------
