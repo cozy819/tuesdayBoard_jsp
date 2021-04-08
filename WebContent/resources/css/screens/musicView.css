@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+.musicView {
+  font-family: "Nanum Brush Script", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.musicView > div {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.musicView iframe {
+  width: 800px;
+  height: 450px;
+}
+.musicView__songInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.musicView__songInfo > div:first-child {
+  font-size: 20px;
+}
+.musicView__songInfo > div:nth-child(2) {
+  font-size: 50px;
+}
+.musicView__lyrics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+}
+.musicView__lyrics p {
+  margin: 3px 0;
+}
+

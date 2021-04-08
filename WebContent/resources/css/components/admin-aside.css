@@ -1,0 +1,18 @@
+.admin-aside {
+  box-sizing: border-box;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.admin-aside > div {
+  margin: 10px 0;
+}
+.admin-aside a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.admin-aside a:hover {
+  color: gold;
+}

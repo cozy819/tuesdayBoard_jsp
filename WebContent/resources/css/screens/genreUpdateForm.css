@@ -1,0 +1,38 @@
+.genreUpdateForm {
+	display: flex;
+	justify-content: center;
+}
+
+.genreUpdateForm table {
+	width: 950px;
+	box-sizing: border-box;
+	margin-top: 50px;
+	font-size: 20px;
+}
+
+.genreUpdateForm input {
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+}
+
+.genreUpdateForm th {
+	background-color: black;
+	color: white;
+	font-size: 20px;
+}
+
+.genreUpdateForm th, .genreUpdateForm td {
+	padding: 10px;
+	text-align: center;
+}
+
+.genreUpdateForm input[type="submit"] {
+	width: 200px;
+	background-color: black;
+	color: white;
+}
+
+.genreUpdateForm input[type="submit"]:hover {
+	color: gold;
+}

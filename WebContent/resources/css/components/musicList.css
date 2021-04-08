@@ -1,0 +1,47 @@
+.musicList {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.musicList__buttons {
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.musicList__buttons a{
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 5px;
+}
+.musicList__buttons a:hover{
+  background-color: black;
+  color: white;
+}
+.musicList > table {
+  width: 90%;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+.musicList > table th {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.musicList > table th,
+.musicList > table td {
+  padding: 10px;
+  text-align: center;
+}
+.musicList > table > tr:nth-child(odd) {
+  background-color: lightgray;
+}
+.musicList > table a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 5px;
+}
+.musicList > table a:hover {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,66 @@
+.repls {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.repls > div {
+  width: 1000px;
+}
+.repls__list {
+  display: grid;
+  grid-auto-flow: 1fr;
+}
+.repl {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+.repl > div:first-child {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.repl > div:nth-child(2) {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.repl > div:nth-child(3) {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  padding-top: 5px;
+}
+.repl > div:last-child {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  display: flex;
+  justify-content: flex-end;
+}
+.repl > div:last-child > a {
+  text-decoration: none;
+  margin-left: 5px;
+}
+.repl > div:last-child > a:hover {
+  background-color: black;
+  color: white;
+}
+.repls__add {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+}
+.repls__add input[type="submit"] {
+  background: black;
+  color: white;
+  width: 10%;
+}
+.repls__add input[type="submit"]:hover {
+  color: gold;
+}
+.repls__add input[type="text"] {
+  width: 85%;
+  margin: 0 5px 5px 0;
+}

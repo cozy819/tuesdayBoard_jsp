@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
+    <script defer src="/resources/js/login.js"></script>
+    <title>Tuesday | Login</title>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>Tuesday Music Board</h1>
+      </div>
+    </header>
+
+    <main class="login">
+      <div>
+        <form method="POST">
+          <label for="userId">ID</label>
+          <br />
+          <input
+            type="text"
+            name="userId"
+            placeholder="ID"
+            id="userId"
+            required
+            value="admin"
+          />
+          <br />
+
+          <label for="password">PASSWORD</label>
+          <br />
+          <input
+            type="password"
+            name="userPassword"
+            placeholder="PASSWORD"
+            id="userPassword"
+            required
+            value="admin"
+          />
+          <br />
+
+          <input type="submit" value="관리자 로그인" id="adminLogin" />
+          <input type="submit" value="회원 로그인" id="clientLogin" />
+        </form>
+      </div>
+
+      <br />
+
+      <div>
+        <div>계정이 아직 없으시다면 ......</div>
+        <a href="/board?cmd=AccountCreateForm">회원가입</a>
+      </div>
+    </main>
+  </body>
+</html>

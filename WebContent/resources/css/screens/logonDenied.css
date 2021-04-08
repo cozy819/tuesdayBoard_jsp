@@ -1,0 +1,26 @@
+.logonDenied {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.logonDenied > div {
+  width: 1000px;
+  box-sizing: border-box;
+}
+.logonDenied h1 {
+  font-size: 50px;
+}
+.logonDenied h2 {
+  margin-top: 10px;
+  font-size: 40px;
+}
+.logonDenied a {
+  text-decoration: none;
+  font-size: 20px;
+}
+.logonDenied a:hover {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}

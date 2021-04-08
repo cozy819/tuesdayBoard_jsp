@@ -1,0 +1,31 @@
+.accountList {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.accountList table {
+  width: 90%;
+  box-sizing: border-box;
+}
+.accountList th {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.accountList th,
+.accountList td {
+  padding: 10px;
+  text-align: center;
+}
+.accountList tr:nth-child(odd) {
+  background-color: lightgray;
+}
+.accountList a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 5px;
+}
+.accountList a:hover {
+  background-color: black;
+  color: white;
+}

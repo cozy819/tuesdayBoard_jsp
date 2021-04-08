@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
+    <title>Tuesday | GenreUpdate</title>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>관리자 - 장르 추가</h1>
+      </div>
+    </header>
+
+    <main class="genreCreateForm">
+      <form action="/board?cmd=GenreCreate" method="POST">
+        <table>
+          <tr>
+            <th>장르이름</th>
+            <td>
+              <input type="text" name="genreName" required />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="center">
+              <input type="submit" value="추가" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </main>
+  </body>
+</html>

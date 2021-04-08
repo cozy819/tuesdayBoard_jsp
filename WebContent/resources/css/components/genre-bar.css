@@ -1,0 +1,23 @@
+.genre-bar {
+  width: 90%;
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  height: 50px;
+}
+.genre-bar > div {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.genre-bar a {
+  text-decoration: none;
+  color: white;
+}
+.genre-bar a:hover {
+  color: gold;
+}

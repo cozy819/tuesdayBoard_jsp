@@ -1,0 +1,26 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+/* Components */
+@import "./components/header.css";
+@import "./components/admin-aside.css";
+@import "./components/accountList.css";
+@import "./components/genreList.css";
+@import "./components/genre-bar.css";
+@import "./components/musicList.css";
+@import "./components/repls.css";
+
+/* Screens */
+@import "./screens/login.css";
+@import "./screens/logonDenied.css";
+@import "./screens/accountCreateForm.css";
+@import "./screens/adminList.css";
+@import "./screens/accountUpdateForm.css";
+@import "./screens/genreUpdateForm.css";
+@import "./screens/genreCreateForm.css";
+@import "./screens/musicView.css";
+@import "./screens/musicAdd.css";
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
