@@ -14,6 +14,8 @@ import com.green.tuesday.impl.ClientMusicList;
 import com.green.tuesday.impl.ContentAdd;
 import com.green.tuesday.impl.ContentAddForm;
 import com.green.tuesday.impl.ContentDelete;
+import com.green.tuesday.impl.ContentUpdate;
+import com.green.tuesday.impl.ContentUpdateForm;
 import com.green.tuesday.impl.ContentView;
 import com.green.tuesday.impl.GenreCreate;
 import com.green.tuesday.impl.GenreCreateForm;
@@ -101,6 +103,14 @@ public class ActionFactory {
 			
 			case "ContentDelete":
 				action = new ContentDelete();
+				break;
+			
+			case "ContentUpdateForm":
+				action = new ContentUpdateForm();
+				break;
+			
+			case "ContentUpdate":
+				action = new ContentUpdate();
 				break;
 				
 			//-- Repl --------------------------------------------------

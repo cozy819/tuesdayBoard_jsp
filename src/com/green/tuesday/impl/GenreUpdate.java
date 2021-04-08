@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.green.tuesday.base.Action;
-import com.green.tuesday.dao.AccountDao;
 import com.green.tuesday.dao.GenreDao;
 
 public class GenreUpdate implements Action {

@@ -133,7 +133,7 @@ public class MusicDao {
 
 		DBConnection db = null;
 
-		int InsertResult = 0;
+		int insertResult = 0;
 
 		try {
 			db = new DBConnection();
@@ -155,7 +155,7 @@ public class MusicDao {
 			pstmt.setString(6, singer);
 			pstmt.setString(7, lyrics);
 
-			InsertResult = pstmt.executeUpdate();
+			insertResult = pstmt.executeUpdate();
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -171,7 +171,7 @@ public class MusicDao {
 			}
 		
 		}
-		return InsertResult;
+		return insertResult;
 	}
 
 	public int deleteMusic(int songNum) {
@@ -210,6 +210,54 @@ public class MusicDao {
 		}			
 		return result2;
 		
+	}
+
+	public int updateContent(int songNum, String genreId, String title, String linkAddress, String albumName,
+			String songName, String singer, String lyrics) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		DBConnection db = null;
+
+		int updateResult = 0;
+
+		try {
+			db = new DBConnection();
+			conn = db.getConnection();
+			
+			//String sql = "update genres set genreName = ? where genreId = ?";
+			
+			String sql = "update boardContent set genreId = ?, title = ?, linkAddress = ?, albumName = ?, songName = ?, singer = ?, lyrics = ?"; 
+			sql += " where songNum = ? "; 
+			 
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, genreId);
+			pstmt.setString(2, title);
+			pstmt.setString(3, linkAddress);
+			pstmt.setString(4, albumName);
+			pstmt.setString(5, songName);
+			pstmt.setString(6, singer);
+			pstmt.setString(7, lyrics);
+			pstmt.setInt(8, songNum);
+
+			updateResult = pstmt.executeUpdate();
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		
+		} finally {
+			try {
+				if(pstmt!=null) pstmt.close();
+				if(conn!=null)  conn.close();
+			
+			} catch(Exception e) {
+				e.printStackTrace();
+			
+			}
+		
+		}
+		return updateResult;
 	}
 
 }

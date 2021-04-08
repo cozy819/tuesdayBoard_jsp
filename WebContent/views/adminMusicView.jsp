@@ -15,7 +15,7 @@
       <div>
         <h1>관리자 - 음악 상세 보기</h1>
         <div>
-        	<a href="/board?cmd=ContentUpdate&songNum=${musicVo.songNum }">수정</a>
+        	<a href="/board?cmd=ContentUpdateForm&songNum=${musicVo.songNum }">수정</a>
       		<a href="/board?cmd=ContentDelete&songNum=${musicVo.songNum }&genreId=${musicVo.genreId}">삭제</a>
       		<a href="/board?cmd=AdminMusicList&genreId=${musicVo.genreId }">관리자 화면으로</a>
       	</div>
